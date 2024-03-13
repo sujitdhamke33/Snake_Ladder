@@ -1,6 +1,11 @@
+import java.util.Random;
+
 public class Main {
 
-    static int position = 0;
+    public static int randomNum() {
+        Random dice = new Random();
+        return dice.nextInt(6) + 1;
+    }
 
     public static void main(String[] args) {
         int start;
@@ -9,5 +14,7 @@ public class Main {
 
         System.out.println("\n...Welcome to the Snake & Ladders Game...\n");
         System.out.println("Your Start Postion: " + start);
+
+        System.out.println("Dice rolled to:  " + randomNum());
     }
 }
